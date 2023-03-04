@@ -1,0 +1,48 @@
+ create table Company(Company_Id int , Company_Name varchar(30), Company_City varchar(30));
+          insert into Company(Company_Id, Company_Name,  Company_City) values (1, 'Chuck', 'Boston'),(2,'Pizza Hut', 'San francisco'),(3,'Papa johns','san diego'),(4,'Ah pizz','Fremont'),(5,'Nini Pizza','Las Vegas'),(6,'Pizzaeria','Boston'),(7,'Dominos','Losangels');
+
+ select * from Company;
++------------------+------------------------+--------------------+
+| Company_Id| Company_Name| Company_City|
++------------------+------------------------+--------------------+
+|                   1 | Chuck                   | Boston            |
+|                   2 | Pizza Hut               | San francisco     |
+|                   3 | Papa johns              | san diego         |
+|                   4 | Ah pizz                 | Fremont           |
+|                   5 | Nini Pizza              | Las Vegas         |
+|                   6 | Pizzaeria               | Boston            |
+|                   7 | Dominos                 | Losangels         |
++------------------+------------------------+--------------------+
+7 rows in set (0.02 sec)
+
+    create table Item (Item_Id int, Item_Name varchar(20), Unit_Sold int, Company_Id int);
+    insert into Item (Item_Id, Item_Name , Unit_Sold , Company_Id) values (1,'Large Pizza',5,2),(2,'Garlic knots',6,3),(3,'Large Pizza',3,3),(4,'Medium Pizza',8,4),(5,'Breadsticks',7,1),(6,'Medium Pizza',11,1),(7,'Small Pizza',9,6),(8,'Small Pizza',6,7);
+
+ select * from Item;
++------------+--------------------+--------------+------------------+
+| Item_Id | Item_Name   | Unit_Sold| Company_Id|
++------------+--------------------+--------------+------------------+
+|            1 | Large Pizza     |              5  |                    2 |
+|            2 | Garlic knots    |              6  |                    3 |
+|            3 | Large Pizza     |              3  |                    3 |
+|            4 | Medium Pizza|                   8 |                    4 |
+|            5 | Breadsticks     |              7  |                    1 |
+|            6 | Medium Pizza|                  11 |                    1 |
+|            7 | Small Pizza     |               9 |                    6 |
+|            8 | Small Pizza     |               6 |                    7 |
++------------+--------------------+--------------+------------------+
+8 rows in set (0.00 sec)
+
+select * from Company inner join Item on Company.Company_Id=Item.Item_Id;
++------------------+------------------------+--------------------+------------+--------------------+--------------+------------------+
+| Company_Id| Company_Name| Company_City| Item_Id | Item_Name   | Unit_Sold| Company_Id|
++------------------+------------------------+--------------------+------------+--------------------+--------------+------------------+
+|                   1 | Chuck                   | Boston            |            1 | Large Pizza     |              5 |                    2 |
+|                   2 | Pizza Hut               | San francisco     |            2 | Garlic knots    |              6 |                    3 |
+|                   3 | Papa johns              | san diego         |            3 | Large Pizza     |              3 |                    3 |
+|                   4 | Ah pizz                 | Fremont           |            4 | Medium Pizza    |              8 |                   4  |
+|                   5 | Nini Pizza              | Las Vegas         |            5 | Breadsticks     |             7  |                    1 |
+|                   6 | Pizzaeria               | Boston            |            6 | Medium Pizza    |           11   |                   1  |
+|                   7 | Dominos                 | Losangels         |            7 | Small Pizza     |              9 |                   6  |
++------------------+------------------------+--------------------+------------+--------------------+--------------+------------------+
+7 rows in set (0.07 sec)

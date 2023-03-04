@@ -1,0 +1,122 @@
+1.	create a table named tblParents in Student schema, the Create table definition will be as following(minimum 20 entry is required )
+•	parent id
+•	parents name
+•	city
+•	age
+•	annual income
+•	occupation
+•	emailid
+mysql> insert into tblParents(Parent_id,Parents_Name,City,Age,Annual_income,Occupation,Email_id)values(1,' Mayank Shukla', 'Patna',54,400000,'Employee','shukla05mayank@gmail.com'),(2,'Namdev Surve','Solapur',49,100000,'Farmer','namdev7@gmail.com'),
+(3,'Madhukar Mane','Sangli',50,1000000,'Bussiness','mane7@gmail.com'),(4,'Prathmesh Pawar','Surat',49,6000000,'Actor',' prathmesh7@gmail.com'),(5,'Sharan Singh','Goa',37,40000,'Singer','singh3@gmaol.com'),(6,'Ayesha Khan','Goa',40,60000,'Singer','khan7@gmaol.com'),
+(7,'Jahir Mandal','Nagaland',28,50000,'Chef','khan21@gmail.com'),(8,'Priyah Singh','Mumbai',23,500000,'Actor','singh34@gmail.com'),9,'Santosh Patil','America',32,600000,'Employee','patil23@gmail.com'),(10,'Karan Mehta','Dubai',34,700000,'Business','mehta2@gmail.com'),
+(10,'Karan Mehta','Dubai',34,700000,'Business','mehta2@gmail.com'),(11,' Akshay Kumar','Delhi',21,50000,'Job','kumar8@gmail.com'),(12,'Raj Malhotra','Mumbai',49,1000000,'Actor','malhotraraj07@gmail.com'),(13,'Aryan Avasthi','Rajkot', 46, 700000,'Servant','avasthia2708@gmail.com'),
+(14,'Vinayak Patil','Kolhapur', 43, 550000,'Shopkeeper','patilvinayak@gmail.com'),s (15, 'Dilip Birajdar', 'Solapur', 43, 50000, 'ShopKeeper', 'dilipbirajdar12@gmail.com'),(16, 'Kasim Patel', 'Pune', 45, 100000, 'Farmer', 'kasimpatel3@gmail.com'), 
+(17, 'Ames Smith', 'New York', 44, 200000, 'Buisness Man', 'smithames45@gmail.com'), (18, 'Pravin Rahman', 'Delhi', 48, 500000, 'Buisness Man', 'pravinrahman69@gmail.com'), (19, 'Ramesh Patil', 'Mumbai', 46, 700000, 'Teacher', 'patilramesh02@gmail.com'),
+ (20, 'Mary Hanes', 'Delhi', 50, 900000, 'Professor', 'hanesmary097@gmail.com');
+
+mysql> select*from tblParents;
++-----------+-----------------+----------+------+---------------+--------------+---------------------------+
+| Parent_id | Parents_Name    | City     | Age  | Annual_income | Occupation   | Email_id                  |
++-----------+-----------------+----------+------+---------------+--------------+---------------------------+
+|         1 | Mayank Shukla   | Patna    |   54 |        400000 | Employee     | shukla05mayank@gmail.com  |
+|         2 | Namdev Surve    | Solapur  |   49 |        100000 | Farmer       | namdev7@gmail.com         |
+|         3 | Madhukar Mane   | Sangli   |   50 |       1000000 | Bussiness    | mane7@gmail.com           |
+|         4 | Prathmesh Pawar | Surat    |   49 |       6000000 | Actor        |  prathmesh7@gmail.com     |
+|         5 | Sharan Singh    | Goa      |   37 |         40000 | Singer       | singh3@gmaol.com          |
+|         6 | Ayesha Khan     | Goa      |   40 |         60000 | Singer       | khan7@gmail.com           |
+|         7 | Jahir Mandal    | Nagaland |   28 |         50000 | Chef         | khan21@gmail.com          |
+|         8 | Priyah Singh    | Mumbai   |   23 |        500000 | Actor        | singh34@gmail.com         |
+|         9 | Santosh Patil   | America  |   32 |        600000 | Employee     | patil23@gmail.com         |
+|        10 | Karan Mehta     | Dubai    |   34 |        700000 | Business     | mehta2@gmail.com          |
+|        11 |  Akshay Kumar   | Delhi    |   21 |         50000 | Job          | kumar8@gmail.com          |
+|        12 | Raj Malhotra    | Mumbai   |   49 |       1000000 | Actor        | malhotraraj07@gmail.com   |
+|        13 | Aryan Avasthi   | Rajkot   |   46 |        700000 | Servant      | avasthia2708@gmail.com    |
+|        14 | Vinayak Patil   | Kolhapur |   43 |        550000 | Shopkeeper   | patilvinayak@gmail.com    |
+|        15 | Dilip Birajdar  | Solapur  |   43 |         50000 | ShopKeeper   | dilipbirajdar12@gmail.com |
+|        16 | Kasim Patel     | Pune     |   45 |        100000 | Farmer       | kasimpatel3@gmail.com     |
+|        17 | Ames Smith      | New York |   44 |        200000 | Buisness Man | smithames45@gmail.com     |
+|        18 | Pravin Rahman   | Delhi    |   48 |        500000 | Buisness Man | pravinrahman69@gmail.com  |
+|        19 | Ramesh Patil    | Mumbai   |   46 |        700000 | Teacher      | patilramesh02@gmail.com   |
+|        20 | Mary Hanes      | Delhi    |   50 |        900000 | Professor    | hanesmary097@gmail.com    |
++-----------+-----------------+----------+------+---------------+--------------+---------------------------+
+20 rows in set (0.00 sec)
+
+2.	update email id of each parents as “NA”.
+Ans:     update tblParents set Email_Id='NA';
+          select * from tblParents;
++-----------+-----------------+----------+------+---------------+--------------+----------+
+| Parent_id | Parents_Name    | City     | Age  | Annual_income | Occupation   | Email_id |
++-----------+-----------------+----------+------+---------------+--------------+----------+
+|         1 | Mayank Shukla   | Patna    |   54 |        400000 | Employee     | NA       |
+|         2 | Namdev Surve    | Solapur  |   49 |        100000 | Farmer       | NA       |
+|         3 | Madhukar Mane   | Sangli   |   50 |       1000000 | Bussiness    | NA       |
+|         4 | Prathmesh Pawar | Surat    |   49 |       6000000 | Actor        | NA       |
+|         5 | Sharan Singh    | Goa      |   37 |         40000 | Singer       | NA       |
+|         6 | Ayesha Khan     | Goa      |   40 |         60000 | Singer       | NA       |
+|         7 | Jahir Mandal    | Nagaland |   28 |         50000 | Chef         | NA       |
+|         8 | Priyah Singh    | Mumbai   |   23 |        500000 | Actor        | NA       |
+|         9 | Santosh Patil   | America  |   32 |        600000 | Employee     | NA       |
+|        10 | Karan Mehta     | Dubai    |   34 |        700000 | Business     | NA       |
+|        11 |  Akshay Kumar   | Delhi    |   21 |         50000 | Job          | NA       |
+|        12 | Raj Malhotra    | Mumbai   |   49 |       1000000 | Actor        | NA       |
+|        13 | Aryan Avasthi   | Rajkot   |   46 |        700000 | Servant      | NA       |
+|        14 | Vinayak Patil   | Kolhapur |   43 |        550000 | Shopkeeper   | NA       |
+|        15 | Dilip Birajdar  | Solapur  |   43 |         50000 | ShopKeeper   | NA       |
+|        16 | Kasim Patel     | Pune     |   45 |        100000 | Farmer       | NA       |
+|        17 | Ames Smith      | New York |   44 |        200000 | Buisness Man | NA       |
+|        18 | Pravin Rahman   | Delhi    |   48 |        500000 | Buisness Man | NA       |
+|        19 | Ramesh Patil    | Mumbai   |   46 |        700000 | Teacher      | NA       |
+|        20 | Mary Hanes      | Delhi    |   50 |        900000 | Professor    | NA       |
++-----------+-----------------+----------+------+---------------+--------------+----------+
+20 rows in set (0.04 sec)
+
+3.	count number of parents whose annual income is more than 6 lakhs.
+Ans:   select count(Annual_Income) from tblParents where Annual_Income>600000;
++----------------------+
+| count(Annual_Income) |
++----------------------+
+|                    7 |
++----------------------+
+1 row in set (0.17 sec)
+
+4.Select parents who are living in city Ahmedabad, Delhi, Mumbai, Chennai, Banglore.
+
+ select * from tblParents where City='Ahmedabad' or  City='Delhi' or City= 'Mumbai' or City= 'Chennai' or City='Banglore'
++-----------+---------------+--------+------+---------------+--------------+----------+
+| Parent_id | Parents_Name  | City   | Age  | Annual_income | Occupation   | Email_id |
++-----------+---------------+--------+------+---------------+--------------+----------+
+|         8 | Priyah Singh  | Mumbai |   23 |        500000 | Actor        | NA       |
+|        11 |  Akshay Kumar | Delhi  |   21 |         50000 | Job          | NA       |
+|        12 | Raj Malhotra  | Mumbai |   49 |       1000000 | Actor        | NA       |
+|        18 | Pravin Rahman | Delhi  |   48 |        500000 | Buisness Man | NA       |
+|        19 | Ramesh Patil  | Mumbai |   46 |        700000 | Teacher      | NA       |
+|        20 | Mary Hanes    | Delhi  |   50 |        900000 | Professor    | NA       |
++-----------+---------------+--------+------+---------------+--------------+----------+
+6 rows in set (0.00 sec)
+
+
+
+5.	Write a SQL statement to select parent whose annual income is less than 5 lakhs otherwise age is more than 45.
+  Ans-select * from tblParents where Annual_Income<500000 or Age<45;
++-----------+----------------+----------+------+---------------+--------------+----------+
+| Parent_id | Parents_Name   | City     | Age  | Annual_income | Occupation   | Email_id |
++-----------+----------------+----------+------+---------------+--------------+----------+
+|         1 | Mayank Shukla  | Patna    |   54 |        400000 | Employee     | NA       |
+|         2 | Namdev Surve   | Solapur  |   49 |        100000 | Farmer       | NA       |
+|         5 | Sharan Singh   | Goa      |   37 |         40000 | Singer       | NA       |
+|         6 | Ayesha Khan    | Goa      |   40 |         60000 | Singer       | NA       |
+|         7 | Jahir Mandal   | Nagaland |   28 |         50000 | Chef         | NA       |
+|         8 | Priyah Singh   | Mumbai   |   23 |        500000 | Actor        | NA       |
+|         9 | Santosh Patil  | America  |   32 |        600000 | Employee     | NA       |
+|        10 | Karan Mehta    | Dubai    |   34 |        700000 | Business     | NA       |
+|        11 |  Akshay Kumar  | Delhi    |   21 |         50000 | Job          | NA       |
+|        14 | Vinayak Patil  | Kolhapur |   43 |        550000 | Shopkeeper   | NA       |
+|        15 | Dilip Birajdar | Solapur  |   43 |         50000 | ShopKeeper   | NA       |
+|        16 | Kasim Patel    | Pune     |   45 |        100000 | Farmer       | NA       |
+|        17 | Ames Smith     | New York |   44 |        200000 | Buisness Man | NA       |
++-----------+----------------+----------+------+---------------+--------------+----------+
+13 rows in set (0.02 sec)
+6.	Create student table with studentid, student name, Maths, science marks, parent id here parent id is foreign key and make connected with parents table using primary key 
+& foreign key
+
+
